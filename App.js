@@ -76,6 +76,7 @@ export class Flex extends React.Component {
           </View>
           <View style={styles.listMessage}>
             <ScrollView
+              showsHorizontalScrollIndicator={false}
               ref={(ref) => {
                 this.scrollView = ref;
               }}
@@ -220,6 +221,8 @@ const styles = StyleSheet.create({
   },
   themeSwitch:{
       flex: 10,
+      maxWidth: 40,
+      marginRight: 8
   },
   image: {
     flex: 1,
@@ -245,7 +248,7 @@ const styles = StyleSheet.create({
   message: {
     borderRadius: 10,
     fontFamily: 'Calibri',
-    fontSize: 20,
+    fontSize: 16,
     maxWidth: '80%',
     minWidth: '20%',
     padding: 8,
